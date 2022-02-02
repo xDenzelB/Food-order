@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Instructions({ instructions }) {
+export default function Instructions({ instruction }) {
   return <div className='instructions'>
-    {instructions}
+    {instruction}
   </div>;
 }

@@ -6,6 +6,8 @@ import MainDropdown from './Dropdowns/MainDropdown';
 import SideDropdown from './Dropdowns/SideDropdown';
 import DrinkDropdown from './Dropdowns/DrinkDropdown';
 import OrderNameInput from './OrderNameInput';
+import InstructionsForm from './InstructionsForm';
+import InstructionsList from './InstructionsList';
 
 
 function App() {
@@ -26,7 +28,8 @@ function App() {
           <SideDropdown setSideId={setSideId} />
           <DrinkDropdown setDrinkId={setDrinkId} />
         </section>
-
+        <InstructionsForm setInstructions={setInstructions} instructions={instructions} />
+        <InstructionsList instructions={instructions} />
       </div>
      
     </div>
