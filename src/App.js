@@ -5,6 +5,7 @@ import OrderImages from './OrderImages';
 import MainDropdown from './Dropdowns/MainDropdown';
 import SideDropdown from './Dropdowns/SideDropdown';
 import DrinkDropdown from './Dropdowns/DrinkDropdown';
+import OrderNameInput from './OrderNameInput';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 
       <h1>Order For: {orderName}</h1>
       <div className='bottom'>
-
+        <OrderNameInput setOrderName={setOrderName} />
         <section className='dropdown'>
           <MainDropdown setMainId={setMainId} />
           <SideDropdown setSideId={setSideId} />
