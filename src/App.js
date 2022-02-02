@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import OrderImages from './OrderImages';
 import MainDropdown from './Dropdowns/MainDropdown';
+import SideDropdown from './Dropdowns/SideDropdown';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
         <section className='dropdown'>
           <MainDropdown setMainId={setMainId} />
+          <SideDropdown setSideId={setSideId} />
         </section>
 
       </div>
