@@ -4,6 +4,7 @@ import './App.css';
 import OrderImages from './OrderImages';
 import MainDropdown from './Dropdowns/MainDropdown';
 import SideDropdown from './Dropdowns/SideDropdown';
+import DrinkDropdown from './Dropdowns/DrinkDropdown';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <section className='dropdown'>
           <MainDropdown setMainId={setMainId} />
           <SideDropdown setSideId={setSideId} />
+          <DrinkDropdown setDrinkId={setDrinkId} />
         </section>
 
       </div>
