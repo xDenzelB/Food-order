@@ -7,7 +7,7 @@ export default function MainDropdown({ setMainId }) {
   }
   return (
 
-    <div>
+    <div className='diff-food'>
       <select onChange={handleChange}>
         <option value='1'>Dimsum</option>
         <option value='2'>Curry</option>

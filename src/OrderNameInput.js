@@ -7,7 +7,7 @@ export default function OrderNameInput({ setOrderName }) {
   }
   return (
 
-    <section>
+    <section className='set-order'>
         Whats Your Order Name?
 
       <input onChange={handleChange} />

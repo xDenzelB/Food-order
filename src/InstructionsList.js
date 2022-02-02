@@ -3,7 +3,7 @@ import Instructions from './Instructions';
 
 export default function InstructionsList({ instructions }) {
   return ( 
-    <section>
+    <section className='instructions-list'>
       <h2>Instructions: </h2>
       {
         instructions.map((instruction, i) => 

@@ -6,7 +6,7 @@ export default function DrinkDropdown({ setDrinkId }) {
     setDrinkId(e.target.value);
   }
   return (
-    <div>
+    <div className='diff-food'>
       <select onChange={handleChange}>
         <option value='1'>Green Tea</option>
         <option value='2'>Sake</option>

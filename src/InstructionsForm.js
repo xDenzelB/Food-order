@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 
 export default function InstructionsForm({ setInstructions, instructions }) {
   const [instructionsInput, setInstructionsInput] = useState('');
@@ -12,7 +12,7 @@ export default function InstructionsForm({ setInstructions, instructions }) {
     setInstructionsInput('');
   }
   return ( 
-    <section>
+    <section className='buttons'>
       <form onSubmit={handleSubmit}>
         <input value={instructionsInput} onChange={e => setInstructionsInput(e.target.value)} />
         <button>Submit</button>

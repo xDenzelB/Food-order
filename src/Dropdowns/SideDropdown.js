@@ -5,7 +5,7 @@ export default function SideDropdown({ setSideId }) {
     setSideId(e.target.value);
   }
   return ( 
-    <div>
+    <div className='diff-food'>
       <select onChange={handleChange}>
         <option value='1'>Rice</option>
         <option value='2'>Miso Soup</option>
