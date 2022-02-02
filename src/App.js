@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import OrderImages from './OrderImages';
+import MainDropdown from './Dropdowns/MainDropdown';
+import SideDropdown from './Dropdowns/SideDropdown';
+import DrinkDropdown from './Dropdowns/DrinkDropdown';
+import OrderNameInput from './OrderNameInput';
+import InstructionsForm from './InstructionsForm';
+import InstructionsList from './InstructionsList';
+
 
 function App() {
+  const [mainId, setMainId] = useState(1);
+  const [sideId, setSideId] = useState(1);
+  const [drinkId, setDrinkId] = useState(1);
+  const [orderName, setOrderName] = useState('Charles');
+  const [instructions, setInstructions] = useState(['Please make curry extra spicey!!']);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <OrderImages mainId={mainId} sideId={sideId} drinkId={drinkId} />
+
+      <h1>Order For: {orderName}</h1>
+      <div className='bottom'>
+        <OrderNameInput setOrderName={setOrderName} />
+        <section className='dropdown'>
+          <MainDropdown setMainId={setMainId} />
+          <SideDropdown setSideId={setSideId} />
+          <DrinkDropdown setDrinkId={setDrinkId} />
+        </section>
+        <InstructionsForm setInstructions={setInstructions} instructions={instructions} />
+        <InstructionsList instructions={instructions} />
+      </div>
+     
     </div>
   );
 }
